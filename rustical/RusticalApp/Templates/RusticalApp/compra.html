@@ -1,0 +1,30 @@
+{% extends "RusticalApp/padre.html" %}
+
+{% load static %}
+
+{% block Changingcontent %}
+
+<h1>  ¿Deseas comprar nuestras Orellanas?     </h1>
+<p> En esta página dispondremos la información de los usuarios </p>
+
+<br>
+    <form action=""    method="post">{% csrf_token %} <!---esto me crea un formulario y me genra una clave o token para recibir instrucciones metodo para traer informacion-->
+        <table>
+            {{miFormulario1.as_table}}
+        </table>
+        <input type="submit",value="Enviar">
+
+     </form>
+
+     <div class="btn">
+        <p><a href="{% url 'List1'  %}">Haz click acá si deseas ver/editar/eliminar alguna compra</a></p>
+        <p><a href="{% url 'buyapi'  %}">Haz click acá si deseas ver la api de compras</a></p>
+       
+        
+        
+     
+    <!-- end of price tab-->
+    </div>    
+
+     
+{% endblock %}

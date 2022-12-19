@@ -1,0 +1,34 @@
+{% extends "RusticalApp/padre.html" %}
+
+{% load static %}
+
+{% block Changingcontent %}
+
+<h1>  ¡Dejanos tu información!     </h1>
+<p> En esta página, como usuario de Rustical Mushrooms, podrás dejar tu información en el siguiente formulario. </p>
+
+Ingresar un registro:
+    
+<br>
+<form action=""    method="post">{% csrf_token %} <!---esto me crea un formulario y me genra una clave o token para recibir instrucciones metodo para traer informacion-->
+    <table>
+        {{miFormulario.as_table}}
+    </table>
+    <input type="submit",value="Enviar">
+ </form>
+
+
+
+</p>
+
+<div class="btn">
+    <p><a href="{% url 'List'  %}">Haz click acá si deseas ver/editar/eliminar alguna usuario</a></p>
+    <p><a href="{% url 'userapi'  %}">Haz click acá si deseas ver el JSON de la api de usuaries</a></p>
+    
+    
+    
+ 
+<!-- end of price tab-->
+</div> 
+
+{% endblock %}

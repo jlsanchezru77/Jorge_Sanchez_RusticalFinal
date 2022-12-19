@@ -1,0 +1,15 @@
+<!--Este debe llamarse igual que la clase, pero en minuscula-->
+{% extends "RusticalApp/padre.html" %}
+
+{% load static %}
+
+{% block Changingcontent %}
+<form method="post">{% csrf_token %}
+    ¿Estás seguro que deseas eliminar la información de esta compra? "{{object.Peso}}"
+    <input type="submit" value="Eliminar"/>
+
+
+
+</form>
+
+ {% endblock %}

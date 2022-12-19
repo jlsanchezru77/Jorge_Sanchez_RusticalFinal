@@ -1,0 +1,19 @@
+{% extends "RusticalApp/padre.html" %}
+
+{% load static %}
+
+{% block Changingcontent %}
+
+Nombre de usuario: {{Nombre}}
+
+<!--Usuarios: {{usuarios}}-->
+<br>
+{%for usuario1 in usuarios%}
+    Apellidos: {{usuario1.Apellidos}}
+    <br>
+    Edad: {{usuario1.Edad}}
+     <br>
+{%endfor%}
+
+
+{% endblock %}

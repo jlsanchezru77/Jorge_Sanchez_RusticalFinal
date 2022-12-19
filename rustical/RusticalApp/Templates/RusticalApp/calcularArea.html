@@ -1,0 +1,59 @@
+{% extends "RusticalApp/padre.html" %}
+
+{% load static %}
+
+{% block Changingcontent %}
+<h1></h1>
+<h1></h1>
+<center>
+<p align="justify">  
+
+<h3>Para calcular la cantidad de masa de sustrato que debes producir según la masa de espora en <br>
+    \(\mathrm{kg}\) que vayas a cultivar, puedes usar el siguiente módelo heurístico basado en los componentes<br>
+     descritos a continuación:</h3>
+
+ 
+
+</p>
+
+
+
+
+</center>
+<div id="price">
+    <!--price tab-->
+    <div class="plan">
+      <div class="plan-inner">
+        <div class="entry-title">
+          <h3>Sustrato Básico</h3>
+          <div class="price"><span>Recomendaciones de proporciones por kilo de sustrato</span>
+          </div>
+        </div>
+        <div class="entry-content">
+          <ul>
+            <li><strong>Heno</strong> 19.7%</li>
+            <li><strong>Aserrin</strong> 14.8%</li>
+            <li><strong>Viruta</strong> 4.93%</li>
+            <li><strong>Cal viva</strong> 0.987%</li>
+            <li><strong>Yeso</strong> 0.345%</li>
+            <li><strong>Agua</strong> 59.2%</li>
+          </ul>
+        </div>
+        <div class="btn">
+         
+          
+          
+       
+    <!-- end of price tab-->
+  </div>
+
+<center>
+<form action="/RusticalApp/area/"    method="get">{% csrf_token %}
+Masa de espora de Orellana en \(\mathrm{kg}\)    <input type="number" name="lado" id="lado" step="0.5" min="0.5"> <h1></h1>
+    <input type="submit" value="Calcular">
+ </form>
+
+</center>  
+<h2>¡Ciencia!</h2>
+$$i \hbar \frac{\partial \Phi(\vec{r},t)}{\partial t}=\Bigl[-\frac{\hbar^{2}\nabla^{2}}{2m}+V(\vec{r},t)\Bigr]\Phi(\vec{r},t) $$
+{% endblock %}

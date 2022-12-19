@@ -1,0 +1,19 @@
+{% extends "RusticalApp/padre.html" %}
+
+{% load static %}
+
+{% block Changingcontent %}
+<h2>
+    <p>Nombre del usuarie: {{usuario1.Nombre}}</p>
+    <p>Apellido del usuarie: {{usuario1.Apellidos}}</p>
+    <p>Edad del usuarie: {{usuario1.Edad}}</p>
+
+
+
+</h2>
+
+
+<a href="{% url 'List' %}">Regresar</a>
+
+
+{% endblock %}

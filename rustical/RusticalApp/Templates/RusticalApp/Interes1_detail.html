@@ -1,0 +1,18 @@
+{% extends "RusticalApp/padre.html" %}
+
+{% load static %}
+
+{% block Changingcontent %}
+<h2>
+    <p>El interes usuarie es de: {{Interes1.opcion}}</p>
+    
+
+    {{Interes1.opcion}}
+    <p>{{Interes1.opcion}}</p>
+</h2>
+
+
+<a href="{% url 'List2' %}">Regresar</a>
+
+
+{% endblock %}

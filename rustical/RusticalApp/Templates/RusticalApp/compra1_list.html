@@ -1,0 +1,26 @@
+{% extends "RusticalApp/padre.html" %}
+
+{% load static %}
+
+{% block Changingcontent %}
+
+<h1>  Inicio      </h1>
+<p> En esta página LISTAREMOS la información de las compras hechas por nuestres usuaries </p>
+
+<br>
+
+<h3>Compras de RusticalApp</h3>
+    <ul><!----ul me permite cosntruir listas desordenadas-->
+    {%for compra1 in object_list%}
+       <p>El peso comprado por el usuario fue de: {{compra1.Peso}}\(\mathrm{kg}\)</p>
+       <p>El número de unidades compradas por el usario fue: {{compra1.Unidades}}</p>
+       <p>
+          <a href="{% url 'DetailBuy' compra1.id %}">Ver</a>             </a>
+          <a href="{% url 'EditBuy' compra1.id %}">Editar</a>
+          <a href="{% url 'DeleteBuy' compra1.id %}">Borrar</a>
+      </p>
+{%endfor%}
+    </ul>
+
+
+{% endblock %}

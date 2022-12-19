@@ -1,0 +1,27 @@
+{% extends "RusticalApp/padre.html" %}
+
+{% load static %}
+
+{% block Changingcontent %}
+
+<h1>  Inicio      </h1>
+<p> En esta página LISTAREMOS la información de los usuarios </p>
+
+<br>
+
+<h3>Usuarios RusticalApp</h3>
+    <ul><!----ul me permite cosntruir listas desordenadas-->
+    {%for usuario1 in object_list%}
+       <p>{{usuario1.Nombre}}</p>
+       <p>{{usuario1.Apellidos}}</p>
+       <p>{{usuario1.Edad}}</p>
+       <p>
+          <a href="{% url 'Detail' usuario1.id %}">Ver</a>             </a>
+          <a href="{% url 'Edit' usuario1.id %}">Editar</a>
+          <a href="{% url 'Delete' usuario1.id %}">Borrar</a>
+      </p>
+{%endfor%}
+    </ul>
+
+
+{% endblock %}

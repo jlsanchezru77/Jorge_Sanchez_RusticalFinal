@@ -1,0 +1,82 @@
+{% extends "RusticalApp/padre.html" %}
+
+{% load static %}
+
+{% block Changingcontent %}
+
+<center>
+  <h1>¿Quieres saber cómo cultivar tus propias Orellanas? </h1>
+</center>
+
+<p> Acá te enseñaremos como determinar las "cantidades" apropiadas de los elementos que debes disponer en tu sustrato para efectuar
+    tu cultivo con un uso eficiente de tus recursos. Para esto tenemos que usar un poco de matemáticas... </p>
+
+<head>
+    <style>
+       table, th, td {
+          border: 2px solid rgb(25, 0, 255);
+       }
+    </style>
+ </head>
+
+ <body>
+<center><h1>Elementos para el sustrato de tus Orellanas</h1></center>
+   
+   <div id="price">
+     <!--price tab-->
+     <div class="plan">
+       <div class="plan-inner">
+         <div class="entry-title">
+           <h3>Sustrato Básico</h3>
+           <div class="price"><span>Recomendaciones de proporciones por kilo de sustrato</span>
+           </div>
+         </div>
+         <div class="entry-content">
+           <ul>
+             <li><strong>Fuente de Carbono:</strong> Heno</li>
+             <li><strong>Fuente de Carbono:</strong> Aserrin</li>
+             <li><strong>Organismo:</strong> Esporas</li>
+             <li><strong>Fuente de Nitrógeno:</strong> Cascara de Cebada</li>
+             <li><strong>Balanceador de pH (ácidez):</strong> Cal viva</li>
+             <li><strong>Balanceador de pH (ácidez):</strong> Yeso</li>
+             <li><strong>Fuente de Carbono:</strong> Viruta</li>
+
+           </ul>
+         </div>
+         <div class="btn">
+           <a href="{% url 'Compra'  %}">Haz click acá si deseas ir a compras</a>
+           
+           
+        
+     <!-- end of price tab-->
+   </div>
+
+
+    <center>
+   
+
+<h1>  ¿Deseas comprar nuestras orellanas para tu negocio?     </h1>
+
+
+
+
+
+
+¡Informanos tus intereses!:
+<br>
+    <form action=""    method="post">{% csrf_token %} <!---esto me crea un formulario y me genra una clave o token para recibir instrucciones metodo para traer informacion-->
+        <table>
+            {{miFormulario2.as_table}}
+        </table>
+        <input type="submit",value="Enviar">
+     </form>
+
+     <div class="btn">
+      <p><a href="{% url 'List2'  %}">Haz click acá si deseas ver/editar/eliminar alguna interes</a></p>
+      <p><a href="{% url 'interestapi'  %}">Haz click acá si deseas ver el JSON de la api de intereses</a></p>
+      
+      
+   
+  <!-- end of price tab-->
+  </div> 
+{% endblock %}
